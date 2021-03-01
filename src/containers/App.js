@@ -16,9 +16,9 @@ class App extends Component {
 export default App; */
 
 import React, { Component } from "react";
-import "./App.css";
-import Validation from "./Validation/Validation";
-import Char from "./Char/Char";
+import classes from "../assets/css/style.css";
+import Validation from "../components/Validation/Validation";
+import Char from "../components/Char/Char";
 
 class App extends Component {
     state = {
@@ -48,7 +48,7 @@ class App extends Component {
         });
 
         return (
-            <div className="App">
+            <div className={classes.App}>
                 <input
                     type="text"
                     onChange={this.inputChangedHandler}

@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 
-.abc {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.ABC {
     display:inline-block;
     padding: 16px;
     margin: 16px;
@@ -14,4 +20,8 @@
 
 p {
     color: yellow;
+}
+
+.App {
+    text-align: center;
 }
