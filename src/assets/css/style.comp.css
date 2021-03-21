@@ -1,9 +1,33 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
+/*
+0px - 600px:        Phone
+600px - 900px:      Tablet portrait
+900px - 1200px:     Tablet landscape
+1200px - 1800px:    Desktop  [is where our normal styles apply]
+1800px+:            Big Desktop
 
-.abc {
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+.ABC {
   display: inline-block;
   padding: 16px;
   margin: 16px;
@@ -12,3 +36,6 @@
 
 p {
   color: yellow; }
+
+.App {
+  text-align: center; }

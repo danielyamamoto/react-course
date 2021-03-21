@@ -1,20 +1,3 @@
-/* import React, { Component } from "react";
-//import "./App.css";
-//import "./css/style.css";
-//import "./sass/main.scss";
-
-class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <h1>Hi, I'm React App</h1>
-            </div>
-        );
-    }
-}
-
-export default App; */
-
 import React, { Component } from "react";
 import classes from "../assets/css/style.css";
 import Validation from "../components/Validation/Validation";
