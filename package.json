@@ -55,8 +55,10 @@
         "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/assets/css/style.concat.css -o src/assets/css/style.prefix.css",
         "compress:css": "node-sass src/assets/css/style.prefix.css src/assets/css/style.css --output-style compressed",
         "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
-        "start": "node scripts/start.js",
-        "build": "node scripts/build.js",
+        "start:js": "node scripts/start.js",
+        "build:js": "node scripts/build.js",
+        "start": "npm-run-all -p watch:sass start:js",
+        "build": "npm-run-all build:css build:js",
         "test": "node scripts/test.js --env=jsdom"
     },
     "browserslist": {
