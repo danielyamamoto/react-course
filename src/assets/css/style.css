@@ -177,6 +177,7 @@ body {
   margin: auto;
   width: 800px;
   height: 650px;
+  overflow: auto;
   text-align: center;
   font-weight: 500;
   font-size: 1.2rem; }
