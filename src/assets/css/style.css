@@ -224,6 +224,33 @@ body {
       width: 350px;
       height: 300px; } }
 
+.button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold; }
+  .button:first-of-type {
+    margin-left: 0;
+    padding-left: 0; }
+  .button__success {
+    color: #5C9210; }
+  .button__danger {
+    color: #944317; }
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+
 .content {
   margin-top: 1.6rem; }
 
