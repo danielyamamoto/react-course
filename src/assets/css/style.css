@@ -28,6 +28,9 @@ $breakpoint argument choices:
   padding: 0;
   box-sizing: inherit; }
 
+html {
+  font-size: 62.5%; }
+
 body {
   box-sizing: border-box; }
 
@@ -242,6 +245,47 @@ body {
   .button__danger {
     color: #944317; }
 
+.navigationItem {
+  margin: 10px 0;
+  display: block;
+  width: 100%; }
+  @media only screen and (min-width: 37.5em) {
+    .navigationItem {
+      margin: 0;
+      height: 100%;
+      width: auto;
+      display: flex;
+      align-items: center; } }
+  .navigationItem a {
+    color: #8F5C2C;
+    width: 100%;
+    text-decoration: none;
+    display: block; }
+    @media only screen and (min-width: 37.5em) {
+      .navigationItem a {
+        color: #FFF;
+        height: 100%;
+        width: auto;
+        padding: 16px 10px;
+        border-bottom: 4px solid transparent; } }
+    .navigationItem a:active, .navigationItem a:hover, .navigationItem a.active {
+      color: #40A4C8; }
+      @media only screen and (min-width: 37.5em) {
+        .navigationItem a:active, .navigationItem a:hover, .navigationItem a.active {
+          color: #FFF;
+          background-color: #8F5C2C;
+          border-bottom: 4px solid #40A4C8; } }
+
+.navigationItems {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%; }
+  @media only screen and (min-width: 37.5em) {
+    .navigationItems {
+      flex-flow: row; } }
+
 .backdrop {
   width: 100%;
   height: 100%;
@@ -252,7 +296,15 @@ body {
   background-color: rgba(0, 0, 0, 0.5); }
 
 .content {
-  margin-top: 1.6rem; }
+  margin-top: calc(6rem + 1.6rem); }
+
+.logo {
+  background-color: #FFF;
+  padding: 8px;
+  height: 100%;
+  border-radius: 5px; }
+  .logo > img {
+    height: 100%; }
 
 .modal {
   position: fixed;
@@ -271,3 +323,41 @@ body {
   .modal {
     width: 500px;
     left: calc(50% - 250px); } }
+
+.toolbar {
+  height: 6rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: 90;
+  background-color: #703B09;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .toolbar > nav {
+    height: 100%; }
+
+.sideDrawer {
+  position: fixed;
+  width: 280px;
+  max-width: 70%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  padding: 32px 16px;
+  background-color: #FFF;
+  transition: transform 0.3s ease-out; }
+  @media only screen and (min-width: 37.5em) {
+    .sideDrawer {
+      display: none; } }
+  .sideDrawer__open {
+    transform: translateX(0); }
+  .sideDrawer__close {
+    transform: translateX(-100%); }
+
+@media only screen and (max-width: 37.4em) {
+  .onlyDesktop {
+    display: none; } }
