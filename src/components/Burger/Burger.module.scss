@@ -1,0 +1,26 @@
+@import '../../assets/sass/mixins';
+
+.burger {
+    margin: auto;
+    width: 800px;
+    height: 650px;
+    overflow: auto;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    @include respond(tab-land) {
+        width: 700px;
+        height: 600px;
+    }
+
+    @include respond(tab-port) {
+        width: 450px;
+        height: 400px;
+    }
+
+    @include respond(phone) {
+        width: 350px;
+        height: 300px;
+    }
+}

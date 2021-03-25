@@ -1,0 +1,11 @@
+.navigationItems {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    @media only screen and (min-width: 37.5em) {
+        flex-direction: row;
+    }
+}
