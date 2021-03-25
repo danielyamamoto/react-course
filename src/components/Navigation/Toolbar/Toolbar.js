@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../../../assets/css/style.css';
+import classes from './Toolbar.module.scss';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 

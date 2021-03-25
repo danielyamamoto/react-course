@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../../../../assets/css/style.css';
+import classes from './NavigationItem.module.scss';
 
 const navigationItem = props => (
     <li className={classes.navigationItem}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../../../assets/css/style.css';
+import classes from './NavigationItems.module.scss';
 import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = () => (

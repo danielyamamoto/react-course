@@ -1,0 +1,26 @@
+@import '../../../assets/sass/variables';
+
+.toolbar {
+    height: $height-toolbar;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: 90;
+    background-color: #703B09;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > nav {
+        height: 100%;
+    }
+}
+
+.onlyDesktop {
+    @media only screen and (max-width: 37.4em) {
+        display: none;
+    }
+}
