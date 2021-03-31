@@ -1,0 +1,24 @@
+.inputElement {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    padding: 6px 10px;
+    
+    &:focus {
+        outline: none;
+        background-color: #CCC;
+    }
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+}
+
+.label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
