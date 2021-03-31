@@ -14,7 +14,9 @@ class ContactReact extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Your Name'
+                    placeholder: 'Your Name',
+                    required: true,
+                    pattern: '[A-Za-z._-]{5,20}'
                 },
                 value: ''
             },
@@ -22,7 +24,9 @@ class ContactReact extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Street'
+                    placeholder: 'Street',
+                    required: true,
+                    pattern: '[A-Za-z0-9._-]{5,32}'
                 },
                 value: ''
             },
@@ -30,7 +34,9 @@ class ContactReact extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'ZIP Code'
+                    placeholder: 'ZIP Code',
+                    required: true,
+                    pattern: '[0-9]{5,6}'
                 },
                 value: ''
             },
@@ -38,7 +44,9 @@ class ContactReact extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Country'
+                    placeholder: 'Country',
+                    required: true,
+                    pattern: '[A-Za-z._-]{5,20}'
                 },
                 value: ''
             },
@@ -46,7 +54,9 @@ class ContactReact extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'email',
-                    placeholder: 'Your E-Mail'
+                    placeholder: 'Your E-Mail',
+                    required: true,
+                    pattern: '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[a-z]{2,}$'
                 },
                 value: ''
             },
@@ -58,7 +68,7 @@ class ContactReact extends Component {
                         {value: 'cheapest', displayValue: 'Cheapest'}
                     ]
                 },
-                value: ''
+                value: 'fastest'
             },
         },
         loading: false
