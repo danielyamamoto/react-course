@@ -8,6 +8,7 @@ import Spinner from '../../components/UI/Spinner/Spinner'
 
 import classes from './Auth.module.scss';
 import * as actions from '../../store/actions/index';
+import { updateObject } from '../../shared/utility';
 
 class Auth extends Component {
     state = {
@@ -42,11 +43,10 @@ class Auth extends Component {
         }
     }
 
-    inputChangedHandler = (event, inputIdentifier) => {
-        const updatedControls = {...this.state.controls}; // Copy the state
-        const updatedControl = {...updatedControls[inputIdentifier]}; // Get the value from 'new' state
-        updatedControl.value = event.target.value; // Get the value from the input
-        updatedControls[inputIdentifier] = updatedControl; // Set the correct value to copied state
+    inputChangedHandler = (event, controlName) => {
+        const updatedControls =  updateObject(this.state.controls, {
+            [controlName]: updateObject(this.state.controls[controlName], {value: event.target.value})
+        });
         this.setState({controls: updatedControls}); // Update the state
     }
 

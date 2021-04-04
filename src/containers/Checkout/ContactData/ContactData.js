@@ -9,6 +9,7 @@ import classes from './ContactData.module.scss';
 import axios from '../../../axios-orders';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../../store/actions/index';
+import { updateObject } from '../../../shared/utility';
 
 class ContactReact extends Component {
     state = {
@@ -95,10 +96,8 @@ class ContactReact extends Component {
     }
 
     inputChangedHandler = (event, inputIdentifier) => {
-        const updatedOrderForm = {...this.state.orderForm}; // Copy the state
-        const updatedFormElemet = {...updatedOrderForm[inputIdentifier]}; // Get the value from 'new' state
-        updatedFormElemet.value = event.target.value; // Get the value from the input
-        updatedOrderForm[inputIdentifier] = updatedFormElemet; // Set the correct value to copied state
+        const updatedFormElemet = updateObject(this.state.orderForm[inputIdentifier], {value: event.target.value}); // Get value from event
+        const updatedOrderForm = updateObject(this.state.orderForm, {[inputIdentifier]: updatedFormElemet}); // Set the correct value to copied state
         this.setState({orderForm: updatedOrderForm}); // Update the state
     }
 
